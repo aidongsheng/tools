@@ -22,6 +22,8 @@
 #import "UIView+BlurView.h"
 #import <YYKit.h>
 #import "UIFont+Fonts.h"
+#import "GCDManager.h"
+#include <pthread.h>
 
 //#import <GPUImage.h>
 
