@@ -7,25 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CABCB070C573E6E17BEEDF9 /* libPods-tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FAC5C6F1A044D182D40136 /* libPods-tools.a */; };
+		5E012DAF207D9B4C00452517 /* UIView+BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E012DAE207D9B4C00452517 /* UIView+BlurView.m */; };
 		5E01F9CD206E09E90078721C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9CC206E09E90078721C /* AppDelegate.m */; };
-		5E01F9D0206E09E90078721C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9CF206E09E90078721C /* ViewController.m */; };
-		5E01F9D3206E09E90078721C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E01F9D1206E09E90078721C /* Main.storyboard */; };
 		5E01F9D5206E09E90078721C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E01F9D4206E09E90078721C /* Assets.xcassets */; };
 		5E01F9D8206E09E90078721C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E01F9D6206E09E90078721C /* LaunchScreen.storyboard */; };
 		5E01F9DB206E09E90078721C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9DA206E09E90078721C /* main.m */; };
+		5E01F9E8206E28C60078721C /* ADSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9E7206E28C60078721C /* ADSBaseViewController.m */; };
+		5E01F9EF206E2B900078721C /* NSDictionary+ADSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9EE206E2B900078721C /* NSDictionary+ADSCategory.m */; };
+		5E1E3BE12079C20500805BA8 /* UIView+POPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E3BE02079C20500805BA8 /* UIView+POPAnimation.m */; };
+		5EA840ED207C8DBC009B73DE /* NSObject+GetClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA840EB207C8DBC009B73DE /* NSObject+GetClassProperty.m */; };
+		5EA840F4207C934B009B73DE /* ADSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA840F3207C934B009B73DE /* ADSNavigationController.m */; };
+		5EBBAFBC208591AF00A1C68F /* ADSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBAFBB208591AF00A1C68F /* ADSHomeViewController.m */; };
+		5EBBAFBF208591C400A1C68F /* ADSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBAFBE208591C400A1C68F /* ADSSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05FAC5C6F1A044D182D40136 /* libPods-tools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12539583E63381F78B412087 /* Pods-tools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tools/Pods-tools.debug.xcconfig"; sourceTree = "<group>"; };
+		5D169C863E743C80248171A2 /* Pods-tools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tools.release.xcconfig"; path = "Pods/Target Support Files/Pods-tools/Pods-tools.release.xcconfig"; sourceTree = "<group>"; };
+		5E012DAD207D9B4C00452517 /* UIView+BlurView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BlurView.h"; sourceTree = "<group>"; };
+		5E012DAE207D9B4C00452517 /* UIView+BlurView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlurView.m"; sourceTree = "<group>"; };
 		5E01F9C8206E09E90078721C /* tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E01F9CB206E09E90078721C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E01F9CC206E09E90078721C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5E01F9CE206E09E90078721C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5E01F9CF206E09E90078721C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5E01F9D2206E09E90078721C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E01F9D4206E09E90078721C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E01F9D7206E09E90078721C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E01F9D9206E09E90078721C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E01F9DA206E09E90078721C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E01F9E6206E28C60078721C /* ADSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADSBaseViewController.h; sourceTree = "<group>"; };
+		5E01F9E7206E28C60078721C /* ADSBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADSBaseViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		5E01F9ED206E2B900078721C /* NSDictionary+ADSCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ADSCategory.h"; sourceTree = "<group>"; };
+		5E01F9EE206E2B900078721C /* NSDictionary+ADSCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ADSCategory.m"; sourceTree = "<group>"; };
+		5E01F9F0206E2DA60078721C /* ToolsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsPrefixHeader.pch; sourceTree = "<group>"; };
+		5E1E3BDF2079C20500805BA8 /* UIView+POPAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+POPAnimation.h"; sourceTree = "<group>"; };
+		5E1E3BE02079C20500805BA8 /* UIView+POPAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+POPAnimation.m"; sourceTree = "<group>"; };
+		5EA840EB207C8DBC009B73DE /* NSObject+GetClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GetClassProperty.m"; sourceTree = "<group>"; };
+		5EA840EC207C8DBC009B73DE /* NSObject+GetClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GetClassProperty.h"; sourceTree = "<group>"; };
+		5EA840F1207C923B009B73DE /* Config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.pch; sourceTree = "<group>"; };
+		5EA840F2207C934B009B73DE /* ADSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADSNavigationController.h; sourceTree = "<group>"; };
+		5EA840F3207C934B009B73DE /* ADSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADSNavigationController.m; sourceTree = "<group>"; };
+		5EBBAFBA208591AF00A1C68F /* ADSHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADSHomeViewController.h; sourceTree = "<group>"; };
+		5EBBAFBB208591AF00A1C68F /* ADSHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADSHomeViewController.m; sourceTree = "<group>"; };
+		5EBBAFBD208591C400A1C68F /* ADSSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADSSettingViewController.h; sourceTree = "<group>"; };
+		5EBBAFBE208591C400A1C68F /* ADSSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADSSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +58,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CABCB070C573E6E17BEEDF9 /* libPods-tools.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55968B78E27CC4A45CBDB53E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05FAC5C6F1A044D182D40136 /* libPods-tools.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5963E0DDF6771F1BA26B4862 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12539583E63381F78B412087 /* Pods-tools.debug.xcconfig */,
+				5D169C863E743C80248171A2 /* Pods-tools.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5E01F9BF206E09E90078721C = {
 			isa = PBXGroup;
 			children = (
 				5E01F9CA206E09E90078721C /* tools */,
 				5E01F9C9206E09E90078721C /* Products */,
+				5963E0DDF6771F1BA26B4862 /* Pods */,
+				55968B78E27CC4A45CBDB53E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +103,80 @@
 		5E01F9CA206E09E90078721C /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				5E01F9E9206E2B300078721C /* Category */,
+				5E01F9E2206E15180078721C /* VC */,
+				5E01F9E1206E0C370078721C /* Global */,
 				5E01F9CB206E09E90078721C /* AppDelegate.h */,
 				5E01F9CC206E09E90078721C /* AppDelegate.m */,
-				5E01F9CE206E09E90078721C /* ViewController.h */,
-				5E01F9CF206E09E90078721C /* ViewController.m */,
-				5E01F9D1206E09E90078721C /* Main.storyboard */,
 				5E01F9D4206E09E90078721C /* Assets.xcassets */,
 				5E01F9D6206E09E90078721C /* LaunchScreen.storyboard */,
 				5E01F9D9206E09E90078721C /* Info.plist */,
 				5E01F9DA206E09E90078721C /* main.m */,
+				5E01F9F0206E2DA60078721C /* ToolsPrefixHeader.pch */,
 			);
 			path = tools;
+			sourceTree = "<group>";
+		};
+		5E01F9E1206E0C370078721C /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				5EA840F1207C923B009B73DE /* Config.pch */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		5E01F9E2206E15180078721C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5E01F9E6206E28C60078721C /* ADSBaseViewController.h */,
+				5E01F9E7206E28C60078721C /* ADSBaseViewController.m */,
+				5EA840F2207C934B009B73DE /* ADSNavigationController.h */,
+				5EA840F3207C934B009B73DE /* ADSNavigationController.m */,
+				5EBBAFBA208591AF00A1C68F /* ADSHomeViewController.h */,
+				5EBBAFBB208591AF00A1C68F /* ADSHomeViewController.m */,
+				5EBBAFBD208591C400A1C68F /* ADSSettingViewController.h */,
+				5EBBAFBE208591C400A1C68F /* ADSSettingViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		5E01F9E9206E2B300078721C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5EA840E9207C8D75009B73DE /* NSObject */,
+				5E1E3BDD2079C0C000805BA8 /* UIView */,
+				5EA840EA207C8D92009B73DE /* NSDictionary */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5E1E3BDD2079C0C000805BA8 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				5E1E3BDF2079C20500805BA8 /* UIView+POPAnimation.h */,
+				5E1E3BE02079C20500805BA8 /* UIView+POPAnimation.m */,
+				5E012DAD207D9B4C00452517 /* UIView+BlurView.h */,
+				5E012DAE207D9B4C00452517 /* UIView+BlurView.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		5EA840E9207C8D75009B73DE /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				5EA840EC207C8DBC009B73DE /* NSObject+GetClassProperty.h */,
+				5EA840EB207C8DBC009B73DE /* NSObject+GetClassProperty.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		5EA840EA207C8D92009B73DE /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				5E01F9ED206E2B900078721C /* NSDictionary+ADSCategory.h */,
+				5E01F9EE206E2B900078721C /* NSDictionary+ADSCategory.m */,
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E01F9DE206E09E90078721C /* Build configuration list for PBXNativeTarget "tools" */;
 			buildPhases = (
+				612E91F195F31D4F2923EFB4 /* [CP] Check Pods Manifest.lock */,
 				5E01F9C4206E09E90078721C /* Sources */,
 				5E01F9C5206E09E90078721C /* Frameworks */,
 				5E01F9C6206E09E90078721C /* Resources */,
+				2984731978FCC3EDD5E0DE2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +207,7 @@
 		5E01F9C0206E09E90078721C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ADS;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = ads;
 				TargetAttributes = {
@@ -131,34 +242,81 @@
 			files = (
 				5E01F9D8206E09E90078721C /* LaunchScreen.storyboard in Resources */,
 				5E01F9D5206E09E90078721C /* Assets.xcassets in Resources */,
-				5E01F9D3206E09E90078721C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2984731978FCC3EDD5E0DE2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-tools/Pods-tools-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tools/Pods-tools-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		612E91F195F31D4F2923EFB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E01F9C4206E09E90078721C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E01F9D0206E09E90078721C /* ViewController.m in Sources */,
+				5EBBAFBC208591AF00A1C68F /* ADSHomeViewController.m in Sources */,
 				5E01F9DB206E09E90078721C /* main.m in Sources */,
+				5E01F9EF206E2B900078721C /* NSDictionary+ADSCategory.m in Sources */,
 				5E01F9CD206E09E90078721C /* AppDelegate.m in Sources */,
+				5E1E3BE12079C20500805BA8 /* UIView+POPAnimation.m in Sources */,
+				5E01F9E8206E28C60078721C /* ADSBaseViewController.m in Sources */,
+				5EA840F4207C934B009B73DE /* ADSNavigationController.m in Sources */,
+				5EA840ED207C8DBC009B73DE /* NSObject+GetClassProperty.m in Sources */,
+				5EBBAFBF208591C400A1C68F /* ADSSettingViewController.m in Sources */,
+				5E012DAF207D9B4C00452517 /* UIView+BlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5E01F9D1206E09E90078721C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E01F9D2206E09E90078721C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5E01F9D6206E09E90078721C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,29 +434,41 @@
 		};
 		5E01F9DF206E09E90078721C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12539583E63381F78B412087 /* Pods-tools.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B74XK883LC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Tools/Global/Config.pch";
 				INFOPLIST_FILE = tools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ads.tools;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/tools/Global/Config.h/**";
 			};
 			name = Debug;
 		};
 		5E01F9E0206E09E90078721C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D169C863E743C80248171A2 /* Pods-tools.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B74XK883LC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Tools/Global/Config.pch";
 				INFOPLIST_FILE = tools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ads.tools;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/tools/Global/Config.h/**";
 			};
 			name = Release;
 		};

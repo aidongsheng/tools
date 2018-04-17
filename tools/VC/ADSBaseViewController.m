@@ -7,31 +7,50 @@
 //
 
 #import "ADSBaseViewController.h"
+//#import "UIView+POPAnimation.h"
+//#import "ADSMQTTViewController.h"
+//#import "NSObject+GetClassProperty.h"
 
 @interface ADSBaseViewController ()
-
+@property (nonatomic,strong) UILabel * label;
+//@property (nonatomic,strong) ADSMQTTViewController *mqttVC;
 @end
+
+#define DLog( s, ... ) NSLog( @"<%s,%p %@:(%d)> %@",__func__, self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 
 @implementation ADSBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    if(self.navigationController){
+        self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+    }
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self setupLeftBarButton];
 }
-
+- (void)setupLeftBarButton {
+    // 自定义 leftBarButtonItem ，UIImageRenderingModeAlwaysOriginal 防止图片被渲染
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"Back-蓝"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(leftBarButtonClick)];
+}
+- (void)leftBarButtonClick
+{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+}
+- (void)layoutSubViews
+{
+    //...需要子类重写
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end

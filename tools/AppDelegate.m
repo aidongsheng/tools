@@ -7,8 +7,46 @@
 //
 
 #import "AppDelegate.h"
+#import "ADSBaseViewController.h"
+#import "ADSNavigationController.h"
+#import "ADSHomeViewController.h"
+#import "ADSSettingViewController.h"
 
-@interface AppDelegate ()
+@interface ADSExpandAnimatorObject : NSObject<UIViewControllerAnimatedTransitioning>
+
+@end
+
+@implementation ADSExpandAnimatorObject
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    return 0.2;
+}
+
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    [[transitionContext containerView] addSubview:toView];
+    CGRect toViewFinalFrame = [transitionContext finalFrameForViewController:toVC];
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                     animations:^{
+                         [toView wcc_addFrameAnimation:toViewFinalFrame duration:[self transitionDuration:transitionContext] autoReverse:NO];
+                     }
+                     completion:^(BOOL finished) {
+                         if (![transitionContext transitionWasCancelled]) {
+                             [fromView removeFromSuperview];
+                             [transitionContext completeTransition:YES];
+                         }
+                         else {
+                             [toView removeFromSuperview];
+                             [transitionContext completeTransition:NO];
+                         }
+                     }];
+}
+@end
+
+@interface AppDelegate ()<UINavigationControllerDelegate>
 
 @end
 
@@ -16,36 +54,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    ADSHomeViewController *baseVC = [[ADSHomeViewController alloc]init];
+    ADSNavigationController *navVC = [[ADSNavigationController alloc]initWithRootViewController:baseVC];
+    navVC.delegate = self;
+    _window.rootViewController = navVC;
+    [_window makeKeyAndVisible];
     return YES;
 }
 
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+- ( id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC
+{
+    if (operation == UINavigationControllerOperationPush) {
+        return [[ADSExpandAnimatorObject alloc]init];
+    }
+    return nil;
 }
 
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                          interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
+{
+    return nil;
 }
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
 
 @end

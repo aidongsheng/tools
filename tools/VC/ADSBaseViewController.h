@@ -10,4 +10,8 @@
 
 @interface ADSBaseViewController : UIViewController
 
+/**
+ 布局方法
+ */
+- (void)layoutSubViews;
 @end

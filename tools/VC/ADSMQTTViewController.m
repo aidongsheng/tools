@@ -7,31 +7,44 @@
 //
 
 #import "ADSMQTTViewController.h"
-
-@interface ADSMQTTViewController ()
-
+//#import "ADSChartViewController.h"
+#import "ADSMQTTTool.h"
+#import <Masonry.h>
+#import <YYKit.h>
+#import "UIView+POPAnimation.h"
+@interface ADSMQTTViewController ()<MQTTSessionDelegate>
+@property (nonatomic,strong) QMUIButton * buttonConnect;
 @end
 
 @implementation ADSMQTTViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.buttonConnect];
+    
+//    self.view.backgroundColor = [UIColor qmui_randomColor];
+    [self.view wcc_addAlphaAnimation:1 duration:2 autoReverse:NO];
+    [self.view wcc_addBackgroundColorAnimation:[UIColor qmui_randomColor] duration:1 autoReverse:NO];
+    [_buttonConnect mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view);
+        make.height.equalTo(@50);
+        make.width.equalTo(@200);
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (QMUIButton *)buttonConnect
+{
+    if (!_buttonConnect) {
+        _buttonConnect = [[QMUIButton alloc]init];
+        [_buttonConnect setTitle:@"连接到MQTT服务器" forState:UIControlStateNormal];
+        __block __weak typeof(self) weakself = self;
+        [_buttonConnect addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
+//            ADSChartViewController *chartVC = [[ADSChartViewController alloc]init];
+//            [weakself.navigationController pushViewController:chartVC animated:YES];
+        }];
+    }
+    return _buttonConnect;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
