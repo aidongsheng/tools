@@ -23,9 +23,13 @@
     [self.navigationItem setTitle:@"Home"];
     NSLog(@"%@",self.navigationItem.titleView);
     [[UIApplication sharedApplication].keyWindow addSubview:self.jumpButton];
-    [self layoutSubViews];
-    [self.jumpButton wcc_addCornerRadiusAnimation];
     
+    [[GCDManager shareInstance] asyncExecuteOnGroupQueue:^{
+        [self layoutSubViews];
+    }];
+    [[GCDManager shareInstance] asyncExecuteOnGroupNotify:^{
+        [_jumpButton wcc_addCornerRadiusAnimation];
+    }];
 }
 
 - (UIButton *)jumpButton
@@ -36,21 +40,7 @@
         [_jumpButton setTitle:@"跳转按钮" forState:UIControlStateNormal];
         __weak __block typeof(self) weakself = self;
         [_jumpButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
-            for (int count = 0; count< 5; count++) {
-                [[GCDManager shareInstance] executeTaskWithLock:^(NSLock *lock) {
-                    [lock lock];
-                    sleep(count);
-                    NSLog(@"sleep for %i seconds",count);
-                    [lock unlock];
-                }];
-            }
             
-            
-            ADSSettingViewController *settingVC = [[ADSSettingViewController alloc]init];
-            settingVC.strLeftBarItemTitle = @"hi!";
-            weakself.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"title" style:UIBarButtonItemStylePlain target:weakself action:@selector(back)];
-            [weakself.navigationItem.backBarButtonItem setTintColor:[UIColor blackColor]];
-            [weakself.navigationController pushViewController:settingVC animated:YES];
         }];
     }
     return _jumpButton;
@@ -71,7 +61,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-    
+    [[FPSTool shareInstance] hideFPSInfomation];
 }
 
 

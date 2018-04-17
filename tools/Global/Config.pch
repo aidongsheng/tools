@@ -24,7 +24,11 @@
 #import "UIFont+Fonts.h"
 #import "GCDManager.h"
 #include <pthread.h>
-
+#import <FBShimmering.h>
+#import <FBShimmeringView.h>
+#import <FBShimmeringLayer.h>
+#import "UIViewController+DefaultView.h"
+#import "FPSTool.h"
 //#import <GPUImage.h>
 
 #endif /* Config_pch */

@@ -19,6 +19,8 @@
 		5E63901820859BF00085C4FF /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63901720859BF00085C4FF /* UIFont+Fonts.m */; };
 		5E63901C2085BDE70085C4FF /* UIButton+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63901B2085BDE70085C4FF /* UIButton+ADSAdd.m */; };
 		5E6390202085BFBE0085C4FF /* GCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63901F2085BFBE0085C4FF /* GCDManager.m */; };
+		5E6390242085E2020085C4FF /* UIViewController+DefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6390232085E2020085C4FF /* UIViewController+DefaultView.m */; };
+		5E6390272085E7E40085C4FF /* FPSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6390262085E7E40085C4FF /* FPSTool.m */; };
 		5EA840ED207C8DBC009B73DE /* NSObject+GetClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA840EB207C8DBC009B73DE /* NSObject+GetClassProperty.m */; };
 		5EA840F4207C934B009B73DE /* ADSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA840F3207C934B009B73DE /* ADSNavigationController.m */; };
 		5EBBAFBC208591AF00A1C68F /* ADSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBAFBB208591AF00A1C68F /* ADSHomeViewController.m */; };
@@ -51,6 +53,10 @@
 		5E63901B2085BDE70085C4FF /* UIButton+ADSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ADSAdd.m"; sourceTree = "<group>"; };
 		5E63901E2085BFBE0085C4FF /* GCDManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDManager.h; sourceTree = "<group>"; };
 		5E63901F2085BFBE0085C4FF /* GCDManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDManager.m; sourceTree = "<group>"; };
+		5E6390222085E2020085C4FF /* UIViewController+DefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DefaultView.h"; sourceTree = "<group>"; };
+		5E6390232085E2020085C4FF /* UIViewController+DefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DefaultView.m"; sourceTree = "<group>"; };
+		5E6390252085E7E40085C4FF /* FPSTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPSTool.h; sourceTree = "<group>"; };
+		5E6390262085E7E40085C4FF /* FPSTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSTool.m; sourceTree = "<group>"; };
 		5EA840EB207C8DBC009B73DE /* NSObject+GetClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GetClassProperty.m"; sourceTree = "<group>"; };
 		5EA840EC207C8DBC009B73DE /* NSObject+GetClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GetClassProperty.h"; sourceTree = "<group>"; };
 		5EA840F1207C923B009B73DE /* Config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.pch; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 		5E01F9E9206E2B300078721C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5E6390212085E2020085C4FF /* UIViewController */,
 				5E6390192085BDBB0085C4FF /* UIButton */,
 				5E63901520859BF00085C4FF /* UIFont */,
 				5EA840E9207C8D75009B73DE /* NSObject */,
@@ -196,8 +203,19 @@
 			children = (
 				5E63901E2085BFBE0085C4FF /* GCDManager.h */,
 				5E63901F2085BFBE0085C4FF /* GCDManager.m */,
+				5E6390252085E7E40085C4FF /* FPSTool.h */,
+				5E6390262085E7E40085C4FF /* FPSTool.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5E6390212085E2020085C4FF /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5E6390222085E2020085C4FF /* UIViewController+DefaultView.h */,
+				5E6390232085E2020085C4FF /* UIViewController+DefaultView.m */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		5EA840E9207C8D75009B73DE /* NSObject */ = {
@@ -351,10 +369,12 @@
 				5EBBAFBC208591AF00A1C68F /* ADSHomeViewController.m in Sources */,
 				5E01F9DB206E09E90078721C /* main.m in Sources */,
 				5E63901C2085BDE70085C4FF /* UIButton+ADSAdd.m in Sources */,
+				5E6390242085E2020085C4FF /* UIViewController+DefaultView.m in Sources */,
 				5E01F9EF206E2B900078721C /* NSDictionary+ADSCategory.m in Sources */,
 				5E01F9CD206E09E90078721C /* AppDelegate.m in Sources */,
 				5E1E3BE12079C20500805BA8 /* UIView+POPAnimation.m in Sources */,
 				5E01F9E8206E28C60078721C /* ADSBaseViewController.m in Sources */,
+				5E6390272085E7E40085C4FF /* FPSTool.m in Sources */,
 				5EA840F4207C934B009B73DE /* ADSNavigationController.m in Sources */,
 				5EA840ED207C8DBC009B73DE /* NSObject+GetClassProperty.m in Sources */,
 				5EBBAFBF208591C400A1C68F /* ADSSettingViewController.m in Sources */,
