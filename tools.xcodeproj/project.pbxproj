@@ -16,6 +16,7 @@
 		5E01F9E8206E28C60078721C /* ADSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9E7206E28C60078721C /* ADSBaseViewController.m */; };
 		5E01F9EF206E2B900078721C /* NSDictionary+ADSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9EE206E2B900078721C /* NSDictionary+ADSCategory.m */; };
 		5E1E3BE12079C20500805BA8 /* UIView+POPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E3BE02079C20500805BA8 /* UIView+POPAnimation.m */; };
+		5E63901820859BF00085C4FF /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63901720859BF00085C4FF /* UIFont+Fonts.m */; };
 		5EA840ED207C8DBC009B73DE /* NSObject+GetClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA840EB207C8DBC009B73DE /* NSObject+GetClassProperty.m */; };
 		5EA840F4207C934B009B73DE /* ADSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA840F3207C934B009B73DE /* ADSNavigationController.m */; };
 		5EBBAFBC208591AF00A1C68F /* ADSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBAFBB208591AF00A1C68F /* ADSHomeViewController.m */; };
@@ -42,6 +43,8 @@
 		5E01F9F0206E2DA60078721C /* ToolsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsPrefixHeader.pch; sourceTree = "<group>"; };
 		5E1E3BDF2079C20500805BA8 /* UIView+POPAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+POPAnimation.h"; sourceTree = "<group>"; };
 		5E1E3BE02079C20500805BA8 /* UIView+POPAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+POPAnimation.m"; sourceTree = "<group>"; };
+		5E63901620859BF00085C4FF /* UIFont+Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Fonts.h"; sourceTree = "<group>"; };
+		5E63901720859BF00085C4FF /* UIFont+Fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Fonts.m"; sourceTree = "<group>"; };
 		5EA840EB207C8DBC009B73DE /* NSObject+GetClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GetClassProperty.m"; sourceTree = "<group>"; };
 		5EA840EC207C8DBC009B73DE /* NSObject+GetClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GetClassProperty.h"; sourceTree = "<group>"; };
 		5EA840F1207C923B009B73DE /* Config.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.pch; sourceTree = "<group>"; };
@@ -103,12 +106,12 @@
 		5E01F9CA206E09E90078721C /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				5EBBAFC0208594FB00A1C68F /* Resource */,
 				5E01F9E9206E2B300078721C /* Category */,
 				5E01F9E2206E15180078721C /* VC */,
 				5E01F9E1206E0C370078721C /* Global */,
 				5E01F9CB206E09E90078721C /* AppDelegate.h */,
 				5E01F9CC206E09E90078721C /* AppDelegate.m */,
-				5E01F9D4206E09E90078721C /* Assets.xcassets */,
 				5E01F9D6206E09E90078721C /* LaunchScreen.storyboard */,
 				5E01F9D9206E09E90078721C /* Info.plist */,
 				5E01F9DA206E09E90078721C /* main.m */,
@@ -143,6 +146,7 @@
 		5E01F9E9206E2B300078721C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5E63901520859BF00085C4FF /* UIFont */,
 				5EA840E9207C8D75009B73DE /* NSObject */,
 				5E1E3BDD2079C0C000805BA8 /* UIView */,
 				5EA840EA207C8D92009B73DE /* NSDictionary */,
@@ -161,6 +165,15 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		5E63901520859BF00085C4FF /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				5E63901620859BF00085C4FF /* UIFont+Fonts.h */,
+				5E63901720859BF00085C4FF /* UIFont+Fonts.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 		5EA840E9207C8D75009B73DE /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +190,14 @@
 				5E01F9EE206E2B900078721C /* NSDictionary+ADSCategory.m */,
 			);
 			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		5EBBAFC0208594FB00A1C68F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5E01F9D4206E09E90078721C /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +234,7 @@
 				TargetAttributes = {
 					5E01F9C7206E09E90078721C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -310,6 +331,7 @@
 				5EA840F4207C934B009B73DE /* ADSNavigationController.m in Sources */,
 				5EA840ED207C8DBC009B73DE /* NSObject+GetClassProperty.m in Sources */,
 				5EBBAFBF208591C400A1C68F /* ADSSettingViewController.m in Sources */,
+				5E63901820859BF00085C4FF /* UIFont+Fonts.m in Sources */,
 				5E012DAF207D9B4C00452517 /* UIView+BlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,15 +460,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B74XK883LC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = F9YKTK8MX3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Tools/Global/Config.pch";
 				INFOPLIST_FILE = tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.test2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiningtrip.wochacha4.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fba15e64-4cc7-4699-b68a-6b53ab096592";
+				PROVISIONING_PROFILE_SPECIFIER = wochachadevPP;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/tools/Global/Config.h/**";
 			};
@@ -458,15 +482,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B74XK883LC;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LCV2C75389;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Tools/Global/Config.pch";
 				INFOPLIST_FILE = tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.test2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiningtrip.wochacha4.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a7732db9-22dd-4b83-9f8a-6064a89a9c23";
+				PROVISIONING_PROFILE_SPECIFIER = wccinhouseMP;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/tools/Global/Config.h/**";
 			};

@@ -22,35 +22,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    if(self.navigationController){
-        self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-    }
+    self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self setupLeftBarButton];
+    
 }
-- (void)setupLeftBarButton {
-    // 自定义 leftBarButtonItem ，UIImageRenderingModeAlwaysOriginal 防止图片被渲染
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"Back-蓝"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:self
-                                                                            action:@selector(leftBarButtonClick)];
+
+- (void)setupLeftBarButtonWithTitle:(NSString *)title {
+    UIFont *font = [UIFont HeitiSCWithFontSize:15];
+    NSDictionary *textAttr = @{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:font};
+    [[UINavigationBar appearance] setTitleTextAttributes:textAttr];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:title
+                                                                            style:UIBarButtonItemStyleDone
+                                                                           target:self
+                                                                           action:@selector(leftBarButtonClick)];
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:textAttr
+                                                         forState:UIControlStateNormal];
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:textAttr
+                                                         forState:UIControlStateHighlighted];
 }
+
 - (void)leftBarButtonClick
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
+
 - (void)layoutSubViews
 {
     //...需要子类重写
 }
 
-
-
-
+- (void)setStrLeftBarItemTitle:(NSString *)strLeftBarItemTitle
+{
+    [self setupLeftBarButtonWithTitle:strLeftBarItemTitle];
+}
 
 @end

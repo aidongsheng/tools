@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ADSBaseViewController : UIViewController
-
+@property (nonatomic,copy) NSString *strLeftBarItemTitle;
 /**
  布局方法
  */

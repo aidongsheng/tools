@@ -16,6 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationItem setTitle:@"setting"];
+    [self.navigationItem setTitle:@"Setting"];
 }
 @end

@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationItem setTitle:@"home"];
+    [self.navigationItem setTitle:@"Home"];
+    NSLog(@"%@",self.navigationItem.titleView);
     [self.view addSubview:self.jumpButton];
     [self layoutSubViews];
 }
@@ -30,10 +31,17 @@
         __weak __block typeof(self) weakself = self;
         [_jumpButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
             ADSSettingViewController *settingVC = [[ADSSettingViewController alloc]init];
+            settingVC.strLeftBarItemTitle = @"hi!";
+            weakself.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"title" style:UIBarButtonItemStylePlain target:weakself action:@selector(back)];
+            [weakself.navigationItem.backBarButtonItem setTintColor:[UIColor blackColor]];
             [weakself.navigationController pushViewController:settingVC animated:YES];
         }];
     }
     return _jumpButton;
+}
+
+- (void)back {
+    NSLog(@"back");
 }
 
 - (void)layoutSubViews

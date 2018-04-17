@@ -21,6 +21,8 @@
 #import <PNChart.h>
 #import "UIView+BlurView.h"
 #import <YYKit.h>
+#import "UIFont+Fonts.h"
+
 //#import <GPUImage.h>
 
 #endif /* Config_pch */
