@@ -19,6 +19,7 @@ PODS:
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
   - GPUImage (0.1.7)
+  - KVOController (1.2.0)
   - Masonry (1.1.0)
   - MQTTClient (0.13.0):
     - MQTTClient/Core (= 0.13.0)
@@ -254,6 +255,7 @@ DEPENDENCIES:
   - CocoaAsyncSocket
   - FMDB
   - GPUImage
+  - KVOController
   - Masonry
   - MQTTClient
   - PNChart
@@ -272,6 +274,7 @@ SPEC REPOS:
     - CocoaAsyncSocket
     - FMDB
     - GPUImage
+    - KVOController
     - Masonry
     - MQTTClient
     - PNChart
@@ -290,6 +293,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MQTTClient: aced164e080fb139daa98fc745d01da279e55945
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
@@ -303,6 +307,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 0db569e1239ad58869dc050ea0466c67eba5ac2b
+PODFILE CHECKSUM: fa4d43eab1e0c5bc9d21a12ffa72a5b327f36fef
 
 COCOAPODS: 1.5.0

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6788D17CCC3DD487FDCB9BAFE05A17C6"
-               BlueprintName = "ReactiveObjC"
+               BlueprintIdentifier = "9C2D3327264C1DB785EADD89D3242323"
+               BlueprintName = "KVOController"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libReactiveObjC.a">
+               BuildableName = "libKVOController.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

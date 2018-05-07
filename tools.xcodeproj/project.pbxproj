@@ -16,6 +16,9 @@
 		5E01F9E8206E28C60078721C /* ADSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9E7206E28C60078721C /* ADSBaseViewController.m */; };
 		5E01F9EF206E2B900078721C /* NSDictionary+ADSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F9EE206E2B900078721C /* NSDictionary+ADSCategory.m */; };
 		5E1E3BE12079C20500805BA8 /* UIView+POPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E3BE02079C20500805BA8 /* UIView+POPAnimation.m */; };
+		5E3CF50A2093205600041A80 /* OnlineVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF5092093205600041A80 /* OnlineVideoPlayer.m */; };
+		5E3CF50E2093259100041A80 /* NSString+ADS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF50D2093259100041A80 /* NSString+ADS.m */; };
+		5E3CF51720940D5800041A80 /* ADSNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CF51620940D5800041A80 /* ADSNetworkHelper.m */; };
 		5E63901820859BF00085C4FF /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63901720859BF00085C4FF /* UIFont+Fonts.m */; };
 		5E63901C2085BDE70085C4FF /* UIButton+ADSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63901B2085BDE70085C4FF /* UIButton+ADSAdd.m */; };
 		5E6390202085BFBE0085C4FF /* GCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63901F2085BFBE0085C4FF /* GCDManager.m */; };
@@ -47,6 +50,13 @@
 		5E01F9F0206E2DA60078721C /* ToolsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsPrefixHeader.pch; sourceTree = "<group>"; };
 		5E1E3BDF2079C20500805BA8 /* UIView+POPAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+POPAnimation.h"; sourceTree = "<group>"; };
 		5E1E3BE02079C20500805BA8 /* UIView+POPAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+POPAnimation.m"; sourceTree = "<group>"; };
+		5E3CF5082093205600041A80 /* OnlineVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineVideoPlayer.h; sourceTree = "<group>"; };
+		5E3CF5092093205600041A80 /* OnlineVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineVideoPlayer.m; sourceTree = "<group>"; };
+		5E3CF50D2093259100041A80 /* NSString+ADS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ADS.m"; sourceTree = "<group>"; };
+		5E3CF50F209327B100041A80 /* NSString+ADS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ADS.h"; sourceTree = "<group>"; };
+		5E3CF51020932A3B00041A80 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		5E3CF51520940D5800041A80 /* ADSNetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADSNetworkHelper.h; sourceTree = "<group>"; };
+		5E3CF51620940D5800041A80 /* ADSNetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADSNetworkHelper.m; sourceTree = "<group>"; };
 		5E63901620859BF00085C4FF /* UIFont+Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Fonts.h"; sourceTree = "<group>"; };
 		5E63901720859BF00085C4FF /* UIFont+Fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Fonts.m"; sourceTree = "<group>"; };
 		5E63901A2085BDE70085C4FF /* UIButton+ADSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ADSAdd.h"; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				5EA840F1207C923B009B73DE /* Config.pch */,
+				5E3CF51020932A3B00041A80 /* Macros.h */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 		5E01F9E9206E2B300078721C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5E3CF50B2093235A00041A80 /* NSString */,
 				5E6390212085E2020085C4FF /* UIViewController */,
 				5E6390192085BDBB0085C4FF /* UIButton */,
 				5E63901520859BF00085C4FF /* UIFont */,
@@ -178,6 +190,33 @@
 				5E012DAE207D9B4C00452517 /* UIView+BlurView.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		5E3CF5072093204700041A80 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				5E3CF5082093205600041A80 /* OnlineVideoPlayer.h */,
+				5E3CF5092093205600041A80 /* OnlineVideoPlayer.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		5E3CF50B2093235A00041A80 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				5E3CF50F209327B100041A80 /* NSString+ADS.h */,
+				5E3CF50D2093259100041A80 /* NSString+ADS.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		5E3CF51120940D1B00041A80 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5E3CF51520940D5800041A80 /* ADSNetworkHelper.h */,
+				5E3CF51620940D5800041A80 /* ADSNetworkHelper.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		5E63901520859BF00085C4FF /* UIFont */ = {
@@ -201,6 +240,8 @@
 		5E63901D2085BFA20085C4FF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5E3CF51120940D1B00041A80 /* Network */,
+				5E3CF5072093204700041A80 /* Video */,
 				5E63901E2085BFBE0085C4FF /* GCDManager.h */,
 				5E63901F2085BFBE0085C4FF /* GCDManager.m */,
 				5E6390252085E7E40085C4FF /* FPSTool.h */,
@@ -278,7 +319,7 @@
 				TargetAttributes = {
 					5E01F9C7206E09E90078721C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -367,12 +408,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBBAFBC208591AF00A1C68F /* ADSHomeViewController.m in Sources */,
+				5E3CF51720940D5800041A80 /* ADSNetworkHelper.m in Sources */,
 				5E01F9DB206E09E90078721C /* main.m in Sources */,
 				5E63901C2085BDE70085C4FF /* UIButton+ADSAdd.m in Sources */,
 				5E6390242085E2020085C4FF /* UIViewController+DefaultView.m in Sources */,
+				5E3CF50E2093259100041A80 /* NSString+ADS.m in Sources */,
 				5E01F9EF206E2B900078721C /* NSDictionary+ADSCategory.m in Sources */,
 				5E01F9CD206E09E90078721C /* AppDelegate.m in Sources */,
 				5E1E3BE12079C20500805BA8 /* UIView+POPAnimation.m in Sources */,
+				5E3CF50A2093205600041A80 /* OnlineVideoPlayer.m in Sources */,
 				5E01F9E8206E28C60078721C /* ADSBaseViewController.m in Sources */,
 				5E6390272085E7E40085C4FF /* FPSTool.m in Sources */,
 				5EA840F4207C934B009B73DE /* ADSNavigationController.m in Sources */,
@@ -508,17 +552,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = F9YKTK8MX3;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B74XK883LC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Tools/Global/Config.pch";
 				INFOPLIST_FILE = tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiningtrip.wochacha4.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fba15e64-4cc7-4699-b68a-6b53ab096592";
-				PROVISIONING_PROFILE_SPECIFIER = wochachadevPP;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/tools/Global/Config.h/**";
 			};
@@ -530,18 +575,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = LCV2C75389;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B74XK883LC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Tools/Global/Config.pch";
 				INFOPLIST_FILE = tools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiningtrip.wochacha4.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongsheng.test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a7732db9-22dd-4b83-9f8a-6064a89a9c23";
-				PROVISIONING_PROFILE_SPECIFIER = wccinhouseMP;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/tools/Global/Config.h/**";
 			};

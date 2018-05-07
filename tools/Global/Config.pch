@@ -29,6 +29,9 @@
 #import <FBShimmeringLayer.h>
 #import "UIViewController+DefaultView.h"
 #import "FPSTool.h"
+#import "NSString+ADS.h"
+#import "Macros.h"
+
 //#import <GPUImage.h>
 
 #endif /* Config_pch */

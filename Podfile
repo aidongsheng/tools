@@ -13,4 +13,5 @@ target 'tools' do
     pod 'CocoaAsyncSocket', :inhibit_warnings => true
     pod 'PNChart', :inhibit_warnings => true
     pod 'GPUImage', :inhibit_warnings => true
+    pod 'KVOController', :inhibit_warnings => true
 end
