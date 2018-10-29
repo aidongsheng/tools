@@ -17,6 +17,7 @@
 @end
 
 @implementation ADSExpandAnimatorObject
+
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     return 0.2;

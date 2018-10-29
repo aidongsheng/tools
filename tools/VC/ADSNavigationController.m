@@ -20,7 +20,6 @@
     UIFont *font = [UIFont HeitiSCWithFontSize:23];
     NSDictionary *textAttr = @{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:font};
     [[UINavigationBar appearance] setTitleTextAttributes:textAttr];
-    
     [[UINavigationBar appearance] setTranslucent:NO];
 }
 
