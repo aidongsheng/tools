@@ -72,12 +72,13 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-//    [[FPSTool shareInstance] showFPSInfomation];
+    [[FPSTool shareInstance] showFPSInfomation];
     
     NSLog(@"  MD4 of aidongsheng:%@",[@"aidongsheng" ads_MD4String]);
     NSLog(@"  MD5 of aidongsheng:%@",[@"aidongsheng" ads_MD5String]);
     NSLog(@" SHA1 of aidongsheng:%@",[@"aidongsheng" ads_SHA1String]);
     NSLog(@"CRC32 of aidongsheng:%@",[@"aidongsheng's macbook pro computer is very cool!" ads_CRC32String]);
+    
 }
 
 @end
