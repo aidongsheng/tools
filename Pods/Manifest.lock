@@ -269,7 +269,7 @@ DEPENDENCIES:
   - YYKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - CocoaAsyncSocket
     - FMDB
@@ -307,6 +307,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: fa4d43eab1e0c5bc9d21a12ffa72a5b327f36fef
+PODFILE CHECKSUM: d26cac89eeaf801137930552dfdf6aba4444a991
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.0.beta.2

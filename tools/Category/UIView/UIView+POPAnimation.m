@@ -47,6 +47,7 @@
     scaleAnimation.dynamicsMass = 2;
     scaleAnimation.dynamicsFriction = 15;
     scaleAnimation.dynamicsTension = 200;
+    [self controlAnimation:scaleAnimation];
     [self.layer pop_addAnimation:scaleAnimation forKey:wccScaleXYAnimationKey];
 }
 
@@ -57,6 +58,7 @@
     scaleXAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, scale)];
     scaleXAnimation.duration = duration;
     scaleXAnimation.autoreverses = reverse;
+    [self controlAnimation:scaleXAnimation];
     [self pop_addAnimation:scaleXAnimation forKey:wccScaleXAnimationKey];
 }
 
@@ -67,6 +69,7 @@
     scaleYAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(scale, scale)];
     scaleYAnimation.duration = duration;
     scaleYAnimation.autoreverses = reverse;
+    [self controlAnimation:scaleYAnimation];
     [self pop_addAnimation:scaleYAnimation forKey:wccScaleYAnimationKey];
 }
 
@@ -77,6 +80,7 @@
     rotationAnimation.toValue = @(rotation);
     rotationAnimation.duration = duration;
     rotationAnimation.autoreverses = reverse;
+    [self controlAnimation:rotationAnimation];
     [self.layer pop_addAnimation:rotationAnimation forKey:wccRotationXYAnimationKey];
 }
 - (void)wcc_addRotationXAnimation:(CGFloat)rotation duration:(CGFloat)duration autoReverse:(BOOL)reverse
@@ -86,6 +90,7 @@
     rotationAnimation.toValue = @(rotation);
     rotationAnimation.duration = duration;
     rotationAnimation.autoreverses = reverse;
+    [self controlAnimation:rotationAnimation];
     [self.layer pop_addAnimation:rotationAnimation forKey:wccRotationXAnimationKey];
 }
 - (void)wcc_addRotationYAnimation:(CGFloat)rotation duration:(CGFloat)duration autoReverse:(BOOL)reverse
@@ -95,6 +100,7 @@
     rotationAnimation.toValue = @(rotation);
     rotationAnimation.duration = duration;
     rotationAnimation.autoreverses = reverse;
+    [self controlAnimation:rotationAnimation];
     [self.layer pop_addAnimation:rotationAnimation forKey:wccRotationYAnimationKey];
 }
 - (void)wcc_addViewCenterAnimation:(CGPoint)point duration:(CGFloat)duration autoReverse:(BOOL)reverse
@@ -105,6 +111,7 @@
     centerAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x - self.frame.size.width/2, point.y - self.frame.size.height/2)];
     centerAnim.duration = duration;
     centerAnim.autoreverses = reverse;
+    [self controlAnimation:centerAnim];
     [self pop_addAnimation:centerAnim forKey:wccViewCenterAnimationKey];
 }
 
@@ -115,6 +122,7 @@
     backgroundColorAnim.toValue = backgroundColor;
     backgroundColorAnim.duration = duration;
     backgroundColorAnim.autoreverses = reverse;
+    [self controlAnimation:backgroundColorAnim];
     [self.layer pop_addAnimation:backgroundColorAnim forKey:wccViewBackgroundColorKey];
 }
 
@@ -145,6 +153,7 @@
     countDownAnim.toValue = @(destValue);
     countDownAnim.duration = duration;
     countDownAnim.autoreverses = reverse;
+    [self controlAnimation:countDownAnim];
     [self pop_addAnimation:countDownAnim forKey:wccCountDownAnimationKey];
 }
 
@@ -158,6 +167,7 @@
     CAMediaTimingFunction * func = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     frameAnim.timingFunction = func;
     frameAnim.delegate = self;
+    [self controlAnimation:frameAnim];
     [self pop_addAnimation:frameAnim forKey:wccFrameAnimationKey];
 }
 
@@ -166,6 +176,7 @@
     [self pop_removeAnimationForKey:wccSizeAnimationKey];
     POPSpringAnimation *sizeAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewSize];
     sizeAnim.velocity = [NSValue valueWithCGSize:size];
+    [self controlAnimation:sizeAnim];
     [self pop_addAnimation:sizeAnim forKey:wccSizeAnimationKey];
 }
 
@@ -177,6 +188,7 @@
     alphaAnim.toValue = @(alpha);
     alphaAnim.duration = duration;
     alphaAnim.autoreverses = reverse;
+    [self controlAnimation:alphaAnim];
     [self.layer pop_addAnimation:alphaAnim forKey:wccAlphaAnimationKey];
 }
 
@@ -187,6 +199,7 @@
     translationXYAnim.toValue = [NSValue valueWithCGPoint:point];
     translationXYAnim.duration = duration;
     translationXYAnim.autoreverses = reverse;
+    [self controlAnimation:translationXYAnim];
     [self.layer pop_addAnimation:translationXYAnim forKey:wccTranslationXYAnimationKey];
 }
 
@@ -198,6 +211,7 @@
     positionXAnim.dynamicsTension = 1000;
     positionXAnim.dynamicsFriction = 10;
     positionXAnim.velocity = @50;
+    [self controlAnimation:positionXAnim];
     [self.layer pop_addAnimation:positionXAnim forKey:wccPositionAnimationXKey];
 }
 
@@ -205,13 +219,14 @@
 - (void)wcc_addCornerRadiusAnimation
 {
     [self.layer pop_removeAnimationForKey:wccCornerRadiusAnimationKey];
-    POPSpringAnimation * cornerRadius = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerCornerRadius];
-    cornerRadius.fromValue = @0;
-    cornerRadius.velocity = @1;
+    POPSpringAnimation * cornerRadiusAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerCornerRadius];
+    cornerRadiusAnim.fromValue = @0;
+    cornerRadiusAnim.velocity = @1;
     CGFloat maxSize = self.frame.size.height > self.frame.size.width ? self.frame.size.width : self.frame.size.height;
-    cornerRadius.toValue = @(maxSize/2);
-    cornerRadius.springBounciness = 22.0f;
-    [self.layer pop_addAnimation:cornerRadius forKey:wccCornerRadiusAnimationKey];
+    cornerRadiusAnim.toValue = @(maxSize/2);
+    cornerRadiusAnim.springBounciness = 22.0f;
+    [self controlAnimation:cornerRadiusAnim];
+    [self.layer pop_addAnimation:cornerRadiusAnim forKey:wccCornerRadiusAnimationKey];
 }
 
 - (void)wcc_addLabelTextColorAnimation:(UIColor *)labelTextColor duration:(CGFloat)duration autoReverse:(BOOL)reverse
@@ -222,6 +237,7 @@
         labelTextColorAnimation.duration = duration;
         labelTextColorAnimation.autoreverses = reverse;
         labelTextColorAnimation.toValue = labelTextColor;
+        [self controlAnimation:labelTextColorAnimation];
         [self pop_addAnimation:labelTextColorAnimation forKey:wccLabelTextColorAnimationKey];
     }else{
         NSLog(@"此视图非 UILabel，不可添加 UILabel 文字颜色动画");
@@ -234,6 +250,7 @@
     [self pop_removeAnimationForKey:wccTableViewAnimationWithContentOffset];
     POPSpringAnimation * tableViewOffsetAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPTableViewContentOffset];
     tableViewOffsetAnimation.toValue = [NSValue valueWithCGPoint:contentOffset];
+    [self controlAnimation:tableViewOffsetAnimation];
     [self pop_addAnimation:tableViewOffsetAnimation forKey:wccTableViewAnimationWithContentOffset];
 }
 
@@ -251,6 +268,7 @@
             self.layer.borderColor = [UIColor clearColor].CGColor;
         }
     };
+    [self controlAnimation:BlinkAnimation];
     [self.layer pop_addAnimation:BlinkAnimation forKey:wccBorderBlinkAnimationKey];
 }
 
@@ -270,8 +288,19 @@
     shakeAnimationTranslationX.dynamicsTension = 10000;
     shakeAnimationTranslationX.dynamicsMass = 20;
     shakeAnimationTranslationX.dynamicsFriction = 100;
+    [self controlAnimation:shakeAnimationTranslationX];
     [self.layer pop_addAnimation:shakeAnimationTranslationX forKey:wccShakeAnimationWithOffsetKey];
 }
 
-
+- (void)controlAnimation:(POPAnimation *)anim
+{
+    anim.animationDidStartBlock = ^(POPAnimation *anim) {
+        self.userInteractionEnabled = NO;
+    };
+    anim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        if (finished) {
+            self.userInteractionEnabled = YES;
+        }
+    };
+}
 @end

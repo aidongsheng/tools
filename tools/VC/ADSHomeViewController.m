@@ -8,7 +8,6 @@
 
 #import "ADSHomeViewController.h"
 #import "ADSSettingViewController.h"
-
 @interface ADSHomeViewController ()
 @property (nonatomic, strong) UIButton *jumpButton;
 @property (nonatomic, strong) UILabel *testLabel;
@@ -23,15 +22,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.testLabel];
-    [[UIApplication sharedApplication].keyWindow addSubview:self.jumpButton];
+    [self.view addSubview:self.jumpButton];
     [self layoutSubViews];
-    [self.navigationItem setTitle:@"Home"];
+    
+    self.navigationItem.title = @"Home";
+    QMUIButton *button = [[QMUIButton alloc]init];
+    button.frame = CGRectMake(0, 0, 30, 30);
+    self.navigationItem.titleView = button;
+    
+    [button setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541406632322&di=516ca3d4a89990cd2f0ebc332f392717&imgtype=0&src=http%3A%2F%2Fec4.images-amazon.com%2Fimages%2FI%2F71yVUKar4vL._SL1000_.jpg"]
+                    forState:UIControlStateNormal
+                 placeholder:[UIImage imageNamed:@"jinqiangyu"]];
+//    QMUIPopupMenuView *menuView = [[QMUIPopupMenuView alloc]init];
+//    QMUIPopupMenuItem *item = [QMUIPopupMenuItem itemWithImage:[UIImage imageWithColor:[UIColor qmui_randomColor]] title:@"条目一" handler:^{
+//
+//    }];
+//    menuView.items = @[item];
+//    menuView.itemHeight = 30;
+//    [menuView layoutWithTargetView:self.view];
+    [button wcc_addCornerRadiusAnimation];
+    
+    
     NSLog(@"%@",self.navigationItem.titleView);
 }
 
 - (UIButton *)jumpButton
 {
-    if (!_jumpButton) {
+    if (_jumpButton == nil) {
         _jumpButton = [[UIButton alloc]init];
         _jumpButton.backgroundColor = [UIColor qmui_randomColor];
         [_jumpButton setTitle:@"跳转按钮" forState:UIControlStateNormal];
@@ -61,9 +78,12 @@
 - (void)layoutSubViews
 {
     [self.jumpButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo([UIApplication sharedApplication].keyWindow);
+        make.center.equalTo(self.view);
         make.width.height.mas_equalTo(@100);
     }];
+    _jumpButton.layer.cornerRadius = 50;
+    _jumpButton.layer.masksToBounds = YES;
+    
     [self.testLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);
         make.height.equalTo(@50);
@@ -72,18 +92,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-//    [[FPSTool shareInstance] showFPSInfomation];
-    
-    NSLog(@"  MD4 of aidongsheng:%@",[@"aidongsheng" ads_MD4String]);
-    NSLog(@"  MD5 of aidongsheng:%@",[@"aidongsheng" ads_MD5String]);
-    NSLog(@" SHA1 of aidongsheng:%@",[@"aidongsheng" ads_SHA1String]);
-    NSLog(@"CRC32 of aidongsheng:%@",[@"aidongsheng's macbook pro computer is very cool!" ads_CRC32String]);
-    [self.jumpButton wcc_addShakeAnimationWithOffset:30];
-    
-    [self.jumpButton.titleLabel wcc_addCountDownAnimation:100 duration:2 autoReverse:NO simulateType:wccCountTypeFloatNumber];
     [[GCDManager shareInstance] executeTaskWithLock:^(NSLock *lock) {
         [lock lock];
-        
+        [_jumpButton wcc_addScaleXYAnimation:3 duration:3 autoReverse:YES];
+        [self.jumpButton wcc_addCornerRadiusAnimation];
+        [self.jumpButton wcc_addRotationXYAnimation:M_PI *10 duration:2 autoReverse:NO];
         [lock unlock];
     }];
     
